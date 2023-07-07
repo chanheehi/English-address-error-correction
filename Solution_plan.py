@@ -46,3 +46,4 @@ def __(comparison_results: list, input_data: list):
         'Seoul', 'Gyeonggi-do', 'Busan', 'Daegu', 'Incheon', 'Ulsan', 'Sejong-si', 'Jeollanam-do', 'Jeollabuk-do', 'Jeju-do',
         'Gyeongsangnam-do', 'Gyeongsangbuk-do', 'Gwangju', 'Gangwon-do', 'Daejeon', 'Chungcheongnam-do', 'Chungcheongbuk-do'
         ]
+        
