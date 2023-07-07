@@ -1,7 +1,5 @@
-
-
-def Depth0_pre(tmp_path: list) -> list:
-    # Depth 0의 전처리[일관되게]
+def Region_English2Lower(tmp_path: list) -> list:
+    tmp_path[5] = tmp_path[5].lower()
     if 'seoul' in tmp_path[5]:   tmp_path[5] = 'seoul'
     elif 'gyeonggi' in tmp_path[5]:  tmp_path[5] = 'gyeonggi'
     elif 'busan' in tmp_path[5]: tmp_path[5] = 'busan'
@@ -22,11 +20,29 @@ def Depth0_pre(tmp_path: list) -> list:
 
     return tmp_path
 
-def error_check(comparison_results: list, input_data: list):
+def Region_Korean2English(tmp_path: list) -> list:
+    if '서울' in tmp_path[0]:   tmp_path[0] = 'seoul'
+    elif '경기' in tmp_path[0]:  tmp_path[0] = 'gyeonggi'
+    elif '부산' in tmp_path[0]: tmp_path[0] = 'busan'
+    elif '대구' in tmp_path[0]:  tmp_path[0] = 'daegu'
+    elif '인천' in tmp_path[0]:   tmp_path[0] = 'incheon'
+    elif '울산' in tmp_path[0]: tmp_path[0] = 'ulsan'
+    elif '세종' in tmp_path[0]:    tmp_path[0] = 'sejong'
+    elif ('전남' in tmp_path[0]) or ('전라남도' in tmp_path[0]):   tmp_path[0] = 'jeonnam'
+    elif ('전북' in tmp_path[0]) or ('전라북도' in tmp_path[0]):   tmp_path[0] = 'jeonbuk'
+    elif '제주' in tmp_path[0]:  tmp_path[0] = 'jeju'
+    elif ('경남' in tmp_path[0]) or ('경상남도' in tmp_path[0]): tmp_path[0] = 'gyeongnam'
+    elif ('경북' in tmp_path[0]) or ('경상북도' in tmp_path[0]): tmp_path[0] = 'gyeongbuk'
+    elif '광주' in tmp_path[0]:   tmp_path[0] = 'gwangju'
+    elif '강원' in tmp_path[0]:   tmp_path[0] = 'gangwon'
+    elif '대전' in tmp_path[0]:   tmp_path[0] = 'daejeon'
+    elif ('충남' in tmp_path[0]) or ('충청남도' in tmp_path[0]):  tmp_path[0] = 'chungnam'
+    elif ('충북' in tmp_path[0]) or ('충청북도' in tmp_path[0]):  tmp_path[0] = 'chungbuk'
+
+    return tmp_path
+
+def __(comparison_results: list, input_data: list):
     depth0_government = [
         'Seoul', 'Gyeonggi-do', 'Busan', 'Daegu', 'Incheon', 'Ulsan', 'Sejong-si', 'Jeollanam-do', 'Jeollabuk-do', 'Jeju-do',
         'Gyeongsangnam-do', 'Gyeongsangbuk-do', 'Gwangju', 'Gangwon-do', 'Daejeon', 'Chungcheongnam-do', 'Chungcheongbuk-do'
         ]
-    
-    # input_data[-1]에서 depth0_government의 위치를 int로 반환
-    # depth0_government_index = depth0_government.index(input_data[-1])
