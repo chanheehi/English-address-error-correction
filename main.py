@@ -1,5 +1,4 @@
 from address_translation import file_path
-from address_correction import English_Address_correction
 
 # 주소 데이터 입력
 english_address = 'Seongnam Customs, 8, Yatap-ro 205beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do'
@@ -16,7 +15,8 @@ korean_address_class = file_path(korean_address_cut_unit)
 korean_address_class.korean_filepath()
 
 # 주소 오류 정정
-English_Address_correction(english_address_cut_unit)
+english_path = english_address_class.english_path
+korean_path = korean_address_class.korean_path
 
 
 # 영문주소를 한글주소로 변환====

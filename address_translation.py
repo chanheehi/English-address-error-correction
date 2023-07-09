@@ -1,5 +1,5 @@
 import os
-from solution_plan import Region_English2Lower, Region_Korean2English
+from consistency_match import Region_English2Lower, Region_Korean2English
 
 class file_path:
     def __init__(self, address_cut_unit: list):
@@ -10,7 +10,7 @@ class file_path:
         self.korean_tmp = None
         
     def english_filepath(self):
-        # english_path
+        # 경로 설정
         english_base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'English_address')
         self.english_tmp = self.cut_address_unit.copy()
         path_tmp = Region_English2Lower(self.english_tmp)
@@ -18,7 +18,7 @@ class file_path:
         self.korean_path = os.path.join(english_base_path, f'rnaddrkor_{path_tmp[5]}.txt')
 
     def korean_filepath(self):
-        # korean_path
+        # 경로 설정
         korean_base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Korean_address')
         self.korean_tmp = self.cut_address_unit.copy()
         path_tmp = Region_Korean2English(self.korean_tmp)
