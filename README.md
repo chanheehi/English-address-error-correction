@@ -47,4 +47,6 @@ korean2english = korean_address_class.Korean2English(korean_address_cut_unit)
 
 print(f'english2korean: {english2korean}')
 print(f'korean2english: {korean2english}')
+## english2korean: 41135107434029900000800000|4113510700|경기도|성남시 분당구|야탑동||0|264|2|411354340299|야탑로205번길|0|8|0|4113564000|야탑3동|13503||20110729|0|||성남세관|
+## korean2english: 41135107434029900000800000|4113510700|Gyeonggi-do|Bundang-gu, Seongnam-si|Yatap-dong||411354340299|Yatap-ro 205beon-gil|0|8|0|13503|0|264|2|20110729|
 ```
