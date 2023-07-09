@@ -41,9 +41,5 @@ def Region_Korean2English(tmp_path: list) -> list:
 
     return tmp_path
 
-def __(comparison_results: list, input_data: list):
-    depth0_government = [
-        'Seoul', 'Gyeonggi-do', 'Busan', 'Daegu', 'Incheon', 'Ulsan', 'Sejong-si', 'Jeollanam-do', 'Jeollabuk-do', 'Jeju-do',
-        'Gyeongsangnam-do', 'Gyeongsangbuk-do', 'Gwangju', 'Gangwon-do', 'Daejeon', 'Chungcheongnam-do', 'Chungcheongbuk-do'
-        ]
+
         

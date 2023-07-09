@@ -1,4 +1,5 @@
-from address_translation import English2Korean, Korean2English
+from address_translation import file_path
+from address_correction import English_Address_correction
 
 # 주소 데이터 입력
 english_address = 'Seongnam Customs, 8, Yatap-ro 205beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do'
@@ -8,9 +9,19 @@ korean_address_cut_unit = korean_address.split(',')
 english_address_cut_unit = [tmp.strip() for tmp in english_address_cut_unit]
 korean_address_cut_unit = [tmp.strip() for tmp in korean_address_cut_unit]
 
-# 영문주소를 한글주소로 변환====
-english2korean = English2Korean(english_address_cut_unit)
-korean2english = Korean2English(korean_address_cut_unit)
+# 클래스 선언
+english_address_class = file_path(english_address_cut_unit)
+english_address_class.english_filepath()
+korean_address_class = file_path(korean_address_cut_unit)
+korean_address_class.korean_filepath()
 
-print(f'english2korean: {english_address}')
-print(f'korean2english: {korean_address}')
+# 주소 오류 정정
+English_Address_correction(english_address_cut_unit)
+
+
+# 영문주소를 한글주소로 변환====
+english2korean = english_address_class.English2Korean(english_address_cut_unit)
+korean2english = korean_address_class.Korean2English(korean_address_cut_unit)
+
+print(f'english2korean: {english2korean}')
+print(f'korean2english: {korean2english}')
