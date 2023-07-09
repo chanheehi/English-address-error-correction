@@ -14,7 +14,7 @@ english_address_class.english_filepath()
 korean_address_class = file_path(korean_address_cut_unit)
 korean_address_class.korean_filepath()
 
-# 영문주소를 한글주소로 변환====
+# 주소 변환
 english2korean = english_address_class.English2Korean(english_address_cut_unit)
 korean2english = korean_address_class.Korean2English(korean_address_cut_unit)
 
