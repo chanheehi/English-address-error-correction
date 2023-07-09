@@ -3,7 +3,7 @@
 ## 데이터 준비
 [`주소 데이터`](https://drive.google.com/file/d/1VUxr2g-bXbtzt4SVNY6uOcj6phqFT8TR/view?usp=drive_link)를 누르면 다운할 수 있습니다.
 압축을 해제하고 English_address와 Korean_address를 English-address-error-correction의 하위 폴더로 위치하세요.
-또는 [`주소 데이터`](https://business.juso.go.kr/addrlink/attrbDBDwld/attrbDBDwldList.do?cPath=99MD&menu=%EC%A3%BC%EC%86%8CDB#this)에서 최신 주소 데이터를 제공받을 수 있습니다. 도로명 주소 한글과 도로명 주소 영문을 다운하시기 바랍니다.
+또는 [`주소 DB`](https://business.juso.go.kr/addrlink/attrbDBDwld/attrbDBDwldList.do?cPath=99MD&menu=%EC%A3%BC%EC%86%8CDB#this)에서 최신 주소 데이터를 제공받을 수 있습니다. 도로명 주소 한글과 도로명 주소 영문을 다운하시기 바랍니다.
 #### 예시
 ```Korean-and-English-Address-Converter
 ├── Korean_address
