@@ -14,14 +14,13 @@
 │   └── rneng_...
 ├── address_translation.py
 ├── main.py
-└── Solution_plan.py
+└── consistency_match.py
 ```
 
 ## 실행
 main.py의 코드에서 볼 수 있듯이, English2Korean와 Korean2English 함수를 통해 영어와 한글이 변환된 결과를 얻을 수 있습니다. 입력 형식은 변수 english_address와 korean_address처럼 맞춰주시기 바랍니다.
 ```
 from address_translation import file_path
-from address_correction import English_Address_correction
 
 # 주소 데이터 입력
 english_address = 'Seongnam Customs, 8, Yatap-ro 205beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do'
@@ -36,6 +35,11 @@ english_address_class = file_path(english_address_cut_unit)
 english_address_class.english_filepath()
 korean_address_class = file_path(korean_address_cut_unit)
 korean_address_class.korean_filepath()
+
+# 주소 오류 정정
+english_path = english_address_class.english_path
+korean_path = korean_address_class.korean_path
+
 
 # 영문주소를 한글주소로 변환====
 english2korean = english_address_class.English2Korean(english_address_cut_unit)
